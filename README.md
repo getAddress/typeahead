@@ -8,7 +8,7 @@ npm install getaddress-typeahead
 ```
 ### Or CDN
 ```
-<script src="https://cdn.getaddress.io/scripts/getaddress-typeahead-1.0.1.min.js"></script>
+<script src="https://cdn.getaddress.io/scripts/getaddress-typeahead-1.0.2.min.js"></script>
 ```
 
 ## Example Usage
@@ -27,7 +27,7 @@ The full list of options, and their defaults:
 ```
 getAddress.typeahead(
         'textbox_id',
-         search_on: 'postcode|line_1|line_2|line_3|locality|town_or_city|district|county|country', /*the field to search on*/
+         search_on: 'postcode|locality|town_or_city|district|county|country', /*the field to search on*/
         'API KEY or Domain Token'
         }
     );

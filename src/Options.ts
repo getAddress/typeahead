@@ -1,4 +1,4 @@
-export type SearchOn = "postcode"| "line_1"| "line_2"| "line_3"| "locality"| "town_or_city"| "district"| "county"| "country";
+export type SearchOn = "postcode"| "locality"| "town_or_city"| "district"| "county"| "country";
 
 export class Options 
 {
