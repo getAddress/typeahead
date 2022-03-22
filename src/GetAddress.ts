@@ -14,7 +14,7 @@ class InstanceCounter
 
 }
 
-export function typeahead(id:string, searchOn:SearchOn|SearchOn[] , api_key:string)
+export function typeahead(id:string, search_on:SearchOn|SearchOn[] , api_key:string)
 {
 
     if(!id){
@@ -23,13 +23,13 @@ export function typeahead(id:string, searchOn:SearchOn|SearchOn[] , api_key:stri
 
     const allOptions = new Options();
 
-    if(searchOn instanceof Array)
+    if(search_on instanceof Array)
     {
-        allOptions.search = searchOn;
+        allOptions.search = search_on;
     }
     else
     {
-        allOptions.search = [searchOn];
+        allOptions.search = [search_on];
     }
 
     let textbox = document.getElementById(id) as HTMLInputElement;
