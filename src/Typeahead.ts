@@ -1,14 +1,14 @@
 import AttributeValues from "./AttributeValues";
-import Client, { TypeaheadOptions  } from 'getaddress-api';
+import {Client,TypeaheadOptions} from 'getaddress-api';
 import { ResultsFailedEvent } from "./Events";
 
 
 export default class Typeahead
 {
 
-    private filterTimer: ReturnType<typeof setTimeout>
-    private blurTimer: ReturnType<typeof setTimeout>
-    private list: HTMLDataListElement;
+    private filterTimer?: ReturnType<typeof setTimeout>
+    private blurTimer?: ReturnType<typeof setTimeout>
+    private list?: HTMLDataListElement;
    
 
     constructor(readonly input:HTMLInputElement,readonly client:Client,
@@ -24,10 +24,11 @@ export default class Typeahead
 
     private destroyList()
     {
-        this.list.remove();
+        if(this.list)
+        {
+            this.list.remove();
+        }
     }
-
-    
 
     private destroyInput(){
 
@@ -61,13 +62,16 @@ export default class Typeahead
         this.input.addEventListener('input', this.onInput);
 
         this.list = document.createElement('DATALIST') as HTMLDataListElement;
-        this.list.id = this.attributeValues.listId;
+        if(this.list)
+        {
+            this.list.id = this.attributeValues.listId;
+        }
         
         this.input.insertAdjacentElement("afterend",this.list);
     }
 
     private onInput =(e:Event) => {
-        if((e instanceof InputEvent == false) && e.target instanceof HTMLInputElement)
+        if(this.list && (e instanceof InputEvent == false) && e.target instanceof HTMLInputElement)
         {
             const input = e.target as HTMLInputElement;
             
@@ -155,7 +159,7 @@ export default class Typeahead
 
     populateList = async ()=>{
             
-            const options = new TypeaheadOptions();
+            const options:Partial<TypeaheadOptions> = {};
 
             if(this.attributeValues.options?.search){
                 options.search = this.attributeValues.options.search;
@@ -169,7 +173,7 @@ export default class Typeahead
                 const success = result.toSuccess();
                 const newItems:Node[] = [];
 
-                if(success.results.length)
+                if( this.list && success.results.length)
                 {
                   
                     for(let i = 0; i< success.results.length; i++){
@@ -195,8 +199,12 @@ export default class Typeahead
     };
 
     
-    clearList = ()=>{
-        this.list.replaceChildren(...[]);
+    clearList = ()=>
+    {
+        if(this.list)
+        {
+            this.list.replaceChildren(...[]);
+        }
     };
 
     getListItem = (result:string)=>

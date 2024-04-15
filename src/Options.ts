@@ -5,22 +5,10 @@ export class Options
     id_prefix?:string = "getAddress-typeahead";
     delay:number = 200;
     debug=false;
-    search:SearchOn[] = undefined;
+    search?:SearchOn[] = undefined;
 
-    constructor(options:IOptions = {})
+    constructor(options:Partial<Options> = {})
     {
-        for (const prop in options) {
-            if (options.hasOwnProperty(prop) && typeof options[prop] !== 'undefined') {
-                this[prop] = options[prop];
-            }
-        }
+        Object.assign(this, options);
     }
 }
-
-export interface IOptions{
-    id_prefix?:string;
-    delay?:number;
-    debug?:boolean;
-    search?:SearchOn[];
-}
-

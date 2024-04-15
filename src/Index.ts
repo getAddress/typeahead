@@ -1,4 +1,4 @@
-import { IOptions, Options,SearchOn } from "./Options";
+import { Options,SearchOn } from "./Options";
 import Client from 'getaddress-api';
 
 import AttributeValues from "./AttributeValues";
