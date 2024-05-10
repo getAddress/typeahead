@@ -14,7 +14,7 @@ class InstanceCounter
 
 }
 
-export function typeahead(id:string, search_on:SearchOn|SearchOn[] , api_key:string)
+function typeahead(id:string, search_on:SearchOn|SearchOn[] , api_key:string)
 {
 
     if(!id){
@@ -52,10 +52,12 @@ export function typeahead(id:string, search_on:SearchOn|SearchOn[] , api_key:str
     InstanceCounter.add(typeahead);
 }
 
-export function destroy()
+function destroy()
 {
     for(const instance of InstanceCounter.instances){
         instance.destroy();
     }
     InstanceCounter.instances = [];
 }
+
+export{typeahead,destroy,SearchOn};

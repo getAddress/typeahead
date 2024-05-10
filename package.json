@@ -1,6 +1,6 @@
 {
   "name": "getaddress-typeahead",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "GetAddress.io - Typeahead Plug-In",
   "main": "./lib/index",
   "type": "module",
