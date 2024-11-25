@@ -1,5 +1,5 @@
-import AttributeValues from "./AttributeValues";
-import { Client } from 'getaddress-api';
+import AttributeValues from "./AttributeValues.js";
+import { Client } from 'getaddress-api/lib';
 export default class Typeahead {
     readonly input: HTMLInputElement;
     readonly client: Client;

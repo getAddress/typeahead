@@ -1,6 +1,6 @@
-import AttributeValues from "./AttributeValues";
-import {Client,TypeaheadOptions} from 'getaddress-api';
-import { ResultsFailedEvent } from "./Events";
+import AttributeValues from "./AttributeValues.js";
+import {Client,TypeaheadOptions} from 'getaddress-api/lib';
+import { ResultsFailedEvent } from "./Events.js";
 
 
 export default class Typeahead
@@ -210,9 +210,7 @@ export default class Typeahead
     getListItem = (result:string)=>
     {
         const option = document.createElement('OPTION') as HTMLOptionElement;
-
         option.innerText = result;
-
         return option;
     };
 

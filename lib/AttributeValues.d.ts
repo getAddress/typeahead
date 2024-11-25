@@ -1,4 +1,4 @@
-import { Options } from "./Options";
+import { Options } from "./Options.js";
 export default class AttributeValues {
     readonly options: Options;
     readonly listId: string;

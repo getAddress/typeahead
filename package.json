@@ -11,17 +11,25 @@
     "type": "git",
     "url": "https://github.com/getAddress/typeahead"
   },
-   "files": [
+  "files": [
     "./lib"
   ],
-   "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanDist": "rimraf dist/*",
     "rollup": "rollup -c",
-    "compile":"tsc -p .",
+    "compile": "tsc -p .",
     "build": "npm-run-all cleanDist compile rollup"
   },
-  "keywords": ["postcode","getAddress","address","plugin","UK","typeahead","datalist"],
+  "keywords": [
+    "postcode",
+    "getAddress",
+    "address",
+    "plugin",
+    "UK",
+    "typeahead",
+    "datalist"
+  ],
   "author": "getAddress()",
   "license": "MIT",
   "devDependencies": {

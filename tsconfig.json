@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-      "moduleResolution": "Node",
+      "moduleResolution": "nodenext",
       "outDir": "lib",
-      "module": "ES2015",
+      "module": "nodenext",
       "target": "ES2015",
       "declaration": true, 
       "forceConsistentCasingInFileNames":  true,

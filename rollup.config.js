@@ -16,6 +16,15 @@ export default [
     },
     {
         input: "lib/Index.js",
+        output: {
+            file:"dist/getaddress-typeahead.mjs",
+            format:"es",
+            sourcemap:  "inline"
+        }
+        ,plugins:[nodeResolve()]
+    },
+    {
+        input: "lib/Index.js",
         output: 
             {
                 file:"dist/getaddress-typeahead-" + pkg.version + ".js",

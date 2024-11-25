@@ -1,8 +1,8 @@
-import { Options,SearchOn } from "./Options";
-import Client from 'getaddress-api';
+import { Options,SearchOn } from "./Options.js";
+import Client from 'getaddress-api/lib';
 
-import AttributeValues from "./AttributeValues";
-import Typeahead from "./Typeahead";
+import AttributeValues from "./AttributeValues.js";
+import Typeahead from "./Typeahead.js";
 
 class InstanceCounter
 {
