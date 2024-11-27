@@ -2,7 +2,7 @@
   "compilerOptions": {
       "moduleResolution": "nodenext",
       "outDir": "lib",
-      "module": "nodenext",
+      "module": "NodeNext",
       "target": "ES2015",
       "declaration": true, 
       "forceConsistentCasingInFileNames":  true,
