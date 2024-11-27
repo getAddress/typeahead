@@ -1,5 +1,5 @@
 import { Options,SearchOn } from "./Options.js";
-import Client from 'getaddress-api/lib';
+import {Client} from '../node_modules/getaddress-api/lib/Index.js';
 
 import AttributeValues from "./AttributeValues.js";
 import Typeahead from "./Typeahead.js";

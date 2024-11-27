@@ -1,5 +1,5 @@
 import AttributeValues from "./AttributeValues.js";
-import {Client,TypeaheadOptions} from 'getaddress-api/lib';
+import {Client,TypeaheadOptions} from '../node_modules/getaddress-api/lib/Index.js';
 import { ResultsFailedEvent } from "./Events.js";
 
 
